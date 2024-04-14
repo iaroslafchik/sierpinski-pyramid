@@ -13,7 +13,6 @@ namespace sierpinski_pyramid {
         public Form1()
         {
             InitializeComponent();
-            321;
         }
     }
 }
