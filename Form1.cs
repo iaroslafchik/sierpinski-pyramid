@@ -8,16 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace sierpinski_pyramid {
-    public partial class Form1 : Form {
-        public Form1()
+namespace course_sierpinski_pyramid {
+    public partial class MainProgramInterface : Form {
+        public MainProgramInterface()
         {
             InitializeComponent();
-        }
-
-        private void ToolStripMenuItemExport_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

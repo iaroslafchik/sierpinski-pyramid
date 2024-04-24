@@ -1,5 +1,5 @@
-﻿namespace sierpinski_pyramid {
-    partial class Form1 {
+﻿namespace course_sierpinski_pyramid {
+    partial class MainProgramInterface {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -24,11 +24,11 @@
         /// </summary>
         private void InitializeComponent() {
             this.menuStrip = new System.Windows.Forms.MenuStrip();
-            this.ToolStripMenuItemFile = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStripMenuItemGuide = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStripMenuItemHelp = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStripMenuItemAbout = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripMenuItemFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemGuide = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemHelp = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemAbout = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelIterations = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelVertices = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelPlanes = new System.Windows.Forms.ToolStripStatusLabel();
@@ -37,33 +37,33 @@
             this.splitContainer = new System.Windows.Forms.SplitContainer();
             this.buttonGenerate = new System.Windows.Forms.Button();
             this.labelIterations = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownIterations = new System.Windows.Forms.NumericUpDown();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPageVertices = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewVertices = new System.Windows.Forms.DataGridView();
             this.tabPagePlanes = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.экспортToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.импортToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataGridViewPlanes = new System.Windows.Forms.DataGridView();
+            this.toolStripMenuItemExport = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemImport = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
+            this.statusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
             this.splitContainer.Panel1.SuspendLayout();
             this.splitContainer.Panel2.SuspendLayout();
             this.splitContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownIterations)).BeginInit();
             this.tabControl.SuspendLayout();
             this.tabPageVertices.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVertices)).BeginInit();
             this.tabPagePlanes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPlanes)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip
             // 
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolStripMenuItemFile,
-            this.ToolStripMenuItemGuide});
+            this.toolStripMenuItemFile,
+            this.toolStripMenuItemGuide});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(704, 24);
@@ -72,47 +72,47 @@
             // 
             // ToolStripMenuItemFile
             // 
-            this.ToolStripMenuItemFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.импортToolStripMenuItem,
-            this.экспортToolStripMenuItem});
-            this.ToolStripMenuItemFile.Name = "ToolStripMenuItemFile";
-            this.ToolStripMenuItemFile.Size = new System.Drawing.Size(48, 20);
-            this.ToolStripMenuItemFile.Text = "Файл";
+            this.toolStripMenuItemFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemImport,
+            this.toolStripMenuItemExport});
+            this.toolStripMenuItemFile.Name = "ToolStripMenuItemFile";
+            this.toolStripMenuItemFile.Size = new System.Drawing.Size(48, 20);
+            this.toolStripMenuItemFile.Text = "Файл";
             // 
             // ToolStripMenuItemGuide
             // 
-            this.ToolStripMenuItemGuide.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolStripMenuItemHelp,
-            this.ToolStripMenuItemAbout});
-            this.ToolStripMenuItemGuide.Name = "ToolStripMenuItemGuide";
-            this.ToolStripMenuItemGuide.Size = new System.Drawing.Size(65, 20);
-            this.ToolStripMenuItemGuide.Text = "Справка";
+            this.toolStripMenuItemGuide.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemHelp,
+            this.toolStripMenuItemAbout});
+            this.toolStripMenuItemGuide.Name = "ToolStripMenuItemGuide";
+            this.toolStripMenuItemGuide.Size = new System.Drawing.Size(65, 20);
+            this.toolStripMenuItemGuide.Text = "Справка";
             // 
             // ToolStripMenuItemHelp
             // 
-            this.ToolStripMenuItemHelp.Name = "ToolStripMenuItemHelp";
-            this.ToolStripMenuItemHelp.Size = new System.Drawing.Size(149, 22);
-            this.ToolStripMenuItemHelp.Text = "Помощь";
+            this.toolStripMenuItemHelp.Name = "ToolStripMenuItemHelp";
+            this.toolStripMenuItemHelp.Size = new System.Drawing.Size(149, 22);
+            this.toolStripMenuItemHelp.Text = "Помощь";
             // 
             // ToolStripMenuItemAbout
             // 
-            this.ToolStripMenuItemAbout.Name = "ToolStripMenuItemAbout";
-            this.ToolStripMenuItemAbout.Size = new System.Drawing.Size(149, 22);
-            this.ToolStripMenuItemAbout.Text = "О программе";
+            this.toolStripMenuItemAbout.Name = "ToolStripMenuItemAbout";
+            this.toolStripMenuItemAbout.Size = new System.Drawing.Size(149, 22);
+            this.toolStripMenuItemAbout.Text = "О программе";
             // 
             // statusStrip1
             // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabelIterations,
             this.toolStripStatusLabelVertices,
             this.toolStripStatusLabelPlanes,
             this.toolStripStatusLabelSpace,
             this.toolStripStatusLabelTime});
-            this.statusStrip1.Location = new System.Drawing.Point(5, 388);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(490, 24);
-            this.statusStrip1.TabIndex = 6;
-            this.statusStrip1.Text = "statusStrip1";
+            this.statusStrip.Location = new System.Drawing.Point(5, 388);
+            this.statusStrip.Name = "statusStrip1";
+            this.statusStrip.Size = new System.Drawing.Size(490, 24);
+            this.statusStrip.TabIndex = 6;
+            this.statusStrip.Text = "statusStrip1";
             // 
             // toolStripStatusLabelIterations
             // 
@@ -160,14 +160,14 @@
             // 
             this.splitContainer.Panel1.Controls.Add(this.buttonGenerate);
             this.splitContainer.Panel1.Controls.Add(this.labelIterations);
-            this.splitContainer.Panel1.Controls.Add(this.numericUpDown1);
+            this.splitContainer.Panel1.Controls.Add(this.numericUpDownIterations);
             this.splitContainer.Panel1.Padding = new System.Windows.Forms.Padding(5);
             this.splitContainer.Panel1MinSize = 150;
             // 
             // splitContainer.Panel2
             // 
             this.splitContainer.Panel2.Controls.Add(this.tabControl);
-            this.splitContainer.Panel2.Controls.Add(this.statusStrip1);
+            this.splitContainer.Panel2.Controls.Add(this.statusStrip);
             this.splitContainer.Panel2.Padding = new System.Windows.Forms.Padding(5);
             this.splitContainer.Panel2MinSize = 300;
             this.splitContainer.Size = new System.Drawing.Size(704, 417);
@@ -197,17 +197,17 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.numericUpDownIterations.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.numericUpDown1.Location = new System.Drawing.Point(72, 8);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.numericUpDownIterations.Location = new System.Drawing.Point(72, 8);
+            this.numericUpDownIterations.Maximum = new decimal(new int[] {
             12,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 0;
+            this.numericUpDownIterations.Name = "numericUpDown1";
+            this.numericUpDownIterations.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDownIterations.TabIndex = 0;
             // 
             // tabControl
             // 
@@ -223,7 +223,7 @@
             // 
             // tabPageVertices
             // 
-            this.tabPageVertices.Controls.Add(this.dataGridView1);
+            this.tabPageVertices.Controls.Add(this.dataGridViewVertices);
             this.tabPageVertices.Location = new System.Drawing.Point(4, 22);
             this.tabPageVertices.Name = "tabPageVertices";
             this.tabPageVertices.Size = new System.Drawing.Size(482, 357);
@@ -233,19 +233,19 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(482, 357);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridViewVertices.AllowUserToAddRows = false;
+            this.dataGridViewVertices.AllowUserToDeleteRows = false;
+            this.dataGridViewVertices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewVertices.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewVertices.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewVertices.Name = "dataGridView1";
+            this.dataGridViewVertices.ReadOnly = true;
+            this.dataGridViewVertices.Size = new System.Drawing.Size(482, 357);
+            this.dataGridViewVertices.TabIndex = 0;
             // 
             // tabPagePlanes
             // 
-            this.tabPagePlanes.Controls.Add(this.dataGridView2);
+            this.tabPagePlanes.Controls.Add(this.dataGridViewPlanes);
             this.tabPagePlanes.Location = new System.Drawing.Point(4, 22);
             this.tabPagePlanes.Name = "tabPagePlanes";
             this.tabPagePlanes.Size = new System.Drawing.Size(603, 357);
@@ -255,27 +255,27 @@
             // 
             // dataGridView2
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(603, 357);
-            this.dataGridView2.TabIndex = 0;
+            this.dataGridViewPlanes.AllowUserToAddRows = false;
+            this.dataGridViewPlanes.AllowUserToDeleteRows = false;
+            this.dataGridViewPlanes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewPlanes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewPlanes.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewPlanes.Name = "dataGridView2";
+            this.dataGridViewPlanes.ReadOnly = true;
+            this.dataGridViewPlanes.Size = new System.Drawing.Size(603, 357);
+            this.dataGridViewPlanes.TabIndex = 0;
             // 
             // экспортToolStripMenuItem
             // 
-            this.экспортToolStripMenuItem.Name = "экспортToolStripMenuItem";
-            this.экспортToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.экспортToolStripMenuItem.Text = "Экспорт";
+            this.toolStripMenuItemExport.Name = "экспортToolStripMenuItem";
+            this.toolStripMenuItemExport.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemExport.Text = "Экспорт";
             // 
             // импортToolStripMenuItem
             // 
-            this.импортToolStripMenuItem.Name = "импортToolStripMenuItem";
-            this.импортToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.импортToolStripMenuItem.Text = "Импорт";
+            this.toolStripMenuItemImport.Name = "импортToolStripMenuItem";
+            this.toolStripMenuItemImport.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemImport.Text = "Импорт";
             // 
             // Form1
             // 
@@ -295,20 +295,20 @@
             this.Text = "Пирамида Серпинского 3D";
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
+            this.statusStrip.ResumeLayout(false);
+            this.statusStrip.PerformLayout();
             this.splitContainer.Panel1.ResumeLayout(false);
             this.splitContainer.Panel1.PerformLayout();
             this.splitContainer.Panel2.ResumeLayout(false);
             this.splitContainer.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).EndInit();
             this.splitContainer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownIterations)).EndInit();
             this.tabControl.ResumeLayout(false);
             this.tabPageVertices.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVertices)).EndInit();
             this.tabPagePlanes.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPlanes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -316,27 +316,29 @@
 
         #endregion
         private System.Windows.Forms.MenuStrip menuStrip;
-        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemFile;
-        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemGuide;
-        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemFile;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemGuide;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemExport;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemImport;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemHelp;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemAbout;
+
+        private System.Windows.Forms.SplitContainer splitContainer;
+        private System.Windows.Forms.TabControl tabControl;
+        private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelIterations;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelVertices;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelPlanes;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelTime;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelSpace;
-        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemHelp;
-        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemAbout;
-        private System.Windows.Forms.SplitContainer splitContainer;
-        private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage tabPageVertices;
+        private System.Windows.Forms.DataGridView dataGridViewVertices;
         private System.Windows.Forms.TabPage tabPagePlanes;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dataGridViewPlanes;
+
         private System.Windows.Forms.Label labelIterations;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numericUpDownIterations;
         private System.Windows.Forms.Button buttonGenerate;
-        private System.Windows.Forms.ToolStripMenuItem экспортToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem импортToolStripMenuItem;
     }
 }
 

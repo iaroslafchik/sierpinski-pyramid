@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sierpinski_pyramid", "sierpinski_pyramid.csproj", "{0C5D58B7-787C-474E-A860-70752AFEDD87}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "course-sierpinski-pyramid", "course-sierpinski-pyramid.csproj", "{0C5D58B7-787C-474E-A860-70752AFEDD87}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
