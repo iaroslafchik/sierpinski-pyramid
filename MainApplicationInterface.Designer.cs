@@ -1,5 +1,5 @@
 ﻿namespace course_sierpinski_pyramid {
-    partial class MainProgramInterface {
+    partial class MainApplicationInterface {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -25,6 +25,8 @@
         private void InitializeComponent() {
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItemFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemImport = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemExport = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemGuide = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemAbout = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,8 +45,6 @@
             this.dataGridViewVertices = new System.Windows.Forms.DataGridView();
             this.tabPagePlanes = new System.Windows.Forms.TabPage();
             this.dataGridViewPlanes = new System.Windows.Forms.DataGridView();
-            this.toolStripMenuItemExport = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemImport = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
@@ -70,37 +70,49 @@
             this.menuStrip.TabIndex = 5;
             this.menuStrip.Text = "menuStrip1";
             // 
-            // ToolStripMenuItemFile
+            // toolStripMenuItemFile
             // 
             this.toolStripMenuItemFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItemImport,
             this.toolStripMenuItemExport});
-            this.toolStripMenuItemFile.Name = "ToolStripMenuItemFile";
+            this.toolStripMenuItemFile.Name = "toolStripMenuItemFile";
             this.toolStripMenuItemFile.Size = new System.Drawing.Size(48, 20);
             this.toolStripMenuItemFile.Text = "Файл";
             // 
-            // ToolStripMenuItemGuide
+            // toolStripMenuItemImport
+            // 
+            this.toolStripMenuItemImport.Name = "toolStripMenuItemImport";
+            this.toolStripMenuItemImport.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemImport.Text = "Импорт";
+            // 
+            // toolStripMenuItemExport
+            // 
+            this.toolStripMenuItemExport.Name = "toolStripMenuItemExport";
+            this.toolStripMenuItemExport.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemExport.Text = "Экспорт";
+            // 
+            // toolStripMenuItemGuide
             // 
             this.toolStripMenuItemGuide.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItemHelp,
             this.toolStripMenuItemAbout});
-            this.toolStripMenuItemGuide.Name = "ToolStripMenuItemGuide";
+            this.toolStripMenuItemGuide.Name = "toolStripMenuItemGuide";
             this.toolStripMenuItemGuide.Size = new System.Drawing.Size(65, 20);
             this.toolStripMenuItemGuide.Text = "Справка";
             // 
-            // ToolStripMenuItemHelp
+            // toolStripMenuItemHelp
             // 
-            this.toolStripMenuItemHelp.Name = "ToolStripMenuItemHelp";
+            this.toolStripMenuItemHelp.Name = "toolStripMenuItemHelp";
             this.toolStripMenuItemHelp.Size = new System.Drawing.Size(149, 22);
             this.toolStripMenuItemHelp.Text = "Помощь";
             // 
-            // ToolStripMenuItemAbout
+            // toolStripMenuItemAbout
             // 
-            this.toolStripMenuItemAbout.Name = "ToolStripMenuItemAbout";
+            this.toolStripMenuItemAbout.Name = "toolStripMenuItemAbout";
             this.toolStripMenuItemAbout.Size = new System.Drawing.Size(149, 22);
             this.toolStripMenuItemAbout.Text = "О программе";
             // 
-            // statusStrip1
+            // statusStrip
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabelIterations,
@@ -109,7 +121,7 @@
             this.toolStripStatusLabelSpace,
             this.toolStripStatusLabelTime});
             this.statusStrip.Location = new System.Drawing.Point(5, 388);
-            this.statusStrip.Name = "statusStrip1";
+            this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(490, 24);
             this.statusStrip.TabIndex = 6;
             this.statusStrip.Text = "statusStrip1";
@@ -140,7 +152,7 @@
             this.toolStripStatusLabelSpace.BorderStyle = System.Windows.Forms.Border3DStyle.Etched;
             this.toolStripStatusLabelSpace.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripStatusLabelSpace.Name = "toolStripStatusLabelSpace";
-            this.toolStripStatusLabelSpace.Size = new System.Drawing.Size(267, 19);
+            this.toolStripStatusLabelSpace.Size = new System.Drawing.Size(146, 19);
             this.toolStripStatusLabelSpace.Spring = true;
             // 
             // toolStripStatusLabelTime
@@ -195,7 +207,7 @@
             this.labelIterations.TabIndex = 1;
             this.labelIterations.Text = "Итерации";
             // 
-            // numericUpDown1
+            // numericUpDownIterations
             // 
             this.numericUpDownIterations.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -205,7 +217,7 @@
             0,
             0,
             0});
-            this.numericUpDownIterations.Name = "numericUpDown1";
+            this.numericUpDownIterations.Name = "numericUpDownIterations";
             this.numericUpDownIterations.Size = new System.Drawing.Size(120, 20);
             this.numericUpDownIterations.TabIndex = 0;
             // 
@@ -231,14 +243,14 @@
             this.tabPageVertices.Text = "Вершины";
             this.tabPageVertices.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dataGridViewVertices
             // 
             this.dataGridViewVertices.AllowUserToAddRows = false;
             this.dataGridViewVertices.AllowUserToDeleteRows = false;
             this.dataGridViewVertices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewVertices.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewVertices.Location = new System.Drawing.Point(0, 0);
-            this.dataGridViewVertices.Name = "dataGridView1";
+            this.dataGridViewVertices.Name = "dataGridViewVertices";
             this.dataGridViewVertices.ReadOnly = true;
             this.dataGridViewVertices.Size = new System.Drawing.Size(482, 357);
             this.dataGridViewVertices.TabIndex = 0;
@@ -248,36 +260,24 @@
             this.tabPagePlanes.Controls.Add(this.dataGridViewPlanes);
             this.tabPagePlanes.Location = new System.Drawing.Point(4, 22);
             this.tabPagePlanes.Name = "tabPagePlanes";
-            this.tabPagePlanes.Size = new System.Drawing.Size(603, 357);
+            this.tabPagePlanes.Size = new System.Drawing.Size(482, 357);
             this.tabPagePlanes.TabIndex = 1;
             this.tabPagePlanes.Text = "Стороны";
             this.tabPagePlanes.UseVisualStyleBackColor = true;
             // 
-            // dataGridView2
+            // dataGridViewPlanes
             // 
             this.dataGridViewPlanes.AllowUserToAddRows = false;
             this.dataGridViewPlanes.AllowUserToDeleteRows = false;
             this.dataGridViewPlanes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewPlanes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewPlanes.Location = new System.Drawing.Point(0, 0);
-            this.dataGridViewPlanes.Name = "dataGridView2";
+            this.dataGridViewPlanes.Name = "dataGridViewPlanes";
             this.dataGridViewPlanes.ReadOnly = true;
-            this.dataGridViewPlanes.Size = new System.Drawing.Size(603, 357);
+            this.dataGridViewPlanes.Size = new System.Drawing.Size(482, 357);
             this.dataGridViewPlanes.TabIndex = 0;
             // 
-            // экспортToolStripMenuItem
-            // 
-            this.toolStripMenuItemExport.Name = "экспортToolStripMenuItem";
-            this.toolStripMenuItemExport.Size = new System.Drawing.Size(180, 22);
-            this.toolStripMenuItemExport.Text = "Экспорт";
-            // 
-            // импортToolStripMenuItem
-            // 
-            this.toolStripMenuItemImport.Name = "импортToolStripMenuItem";
-            this.toolStripMenuItemImport.Size = new System.Drawing.Size(180, 22);
-            this.toolStripMenuItemImport.Text = "Импорт";
-            // 
-            // Form1
+            // MainProgramInterface
             // 
             this.AcceptButton = this.buttonGenerate;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -290,7 +290,7 @@
             this.MainMenuStrip = this.menuStrip;
             this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(720, 480);
-            this.Name = "Form1";
+            this.Name = "MainProgramInterface";
             this.ShowIcon = false;
             this.Text = "Пирамида Серпинского 3D";
             this.menuStrip.ResumeLayout(false);

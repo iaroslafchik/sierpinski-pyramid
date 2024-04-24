@@ -13,7 +13,7 @@ namespace course_sierpinski_pyramid {
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainProgramInterface());
+            Application.Run(new MainApplicationInterface());
         }
     }
 }

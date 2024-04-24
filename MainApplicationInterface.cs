@@ -9,9 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace course_sierpinski_pyramid {
-    public partial class MainProgramInterface : Form {
-        public MainProgramInterface()
-        {
+    public partial class MainApplicationInterface : Form {
+        public MainApplicationInterface() {
             InitializeComponent();
         }
     }
