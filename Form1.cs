@@ -14,5 +14,10 @@ namespace sierpinski_pyramid {
         {
             InitializeComponent();
         }
+
+        private void ToolStripMenuItemExport_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
