@@ -23,222 +23,142 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.menuStrip = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItemFile = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemImport = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemExport = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemGuide = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemHelp = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabelIterations = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabelVertices = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabelPlanes = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabelSpace = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabelTime = new System.Windows.Forms.ToolStripStatusLabel();
-            this.splitContainer = new System.Windows.Forms.SplitContainer();
-            this.buttonGenerate = new System.Windows.Forms.Button();
-            this.labelIterations = new System.Windows.Forms.Label();
+            this.statusStripLabelVertices = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusStripLabelFaces = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusStripSpacer = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusStripProgressBar = new System.Windows.Forms.ToolStripProgressBar();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuStripItemFile = new System.Windows.Forms.ToolStripMenuItem();
             this.numericUpDownIterations = new System.Windows.Forms.NumericUpDown();
+            this.buttonGenerate = new System.Windows.Forms.Button();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPageVertices = new System.Windows.Forms.TabPage();
             this.dataGridViewVertices = new System.Windows.Forms.DataGridView();
-            this.tabPagePlanes = new System.Windows.Forms.TabPage();
-            this.dataGridViewPlanes = new System.Windows.Forms.DataGridView();
-            this.menuStrip.SuspendLayout();
+            this.vertexNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vertexX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vertexY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vertexZ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPageFaces = new System.Windows.Forms.TabPage();
+            this.dataGridViewFaces = new System.Windows.Forms.DataGridView();
+            this.faceNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.verticesUsed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label = new System.Windows.Forms.Label();
+            this.labelScroll = new System.Windows.Forms.Label();
+            this.numericUpDownScroll = new System.Windows.Forms.NumericUpDown();
+            this.labelNumber = new System.Windows.Forms.Label();
+            this.numericUpDownNumber = new System.Windows.Forms.NumericUpDown();
             this.statusStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
-            this.splitContainer.Panel1.SuspendLayout();
-            this.splitContainer.Panel2.SuspendLayout();
-            this.splitContainer.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownIterations)).BeginInit();
             this.tabControl.SuspendLayout();
             this.tabPageVertices.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVertices)).BeginInit();
-            this.tabPagePlanes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPlanes)).BeginInit();
+            this.tabPageFaces.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFaces)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownScroll)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumber)).BeginInit();
             this.SuspendLayout();
-            // 
-            // menuStrip
-            // 
-            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItemFile,
-            this.toolStripMenuItemGuide});
-            this.menuStrip.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(704, 24);
-            this.menuStrip.TabIndex = 5;
-            this.menuStrip.Text = "menuStrip1";
-            // 
-            // toolStripMenuItemFile
-            // 
-            this.toolStripMenuItemFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItemImport,
-            this.toolStripMenuItemExport});
-            this.toolStripMenuItemFile.Name = "toolStripMenuItemFile";
-            this.toolStripMenuItemFile.Size = new System.Drawing.Size(48, 20);
-            this.toolStripMenuItemFile.Text = "Файл";
-            // 
-            // toolStripMenuItemImport
-            // 
-            this.toolStripMenuItemImport.Name = "toolStripMenuItemImport";
-            this.toolStripMenuItemImport.Size = new System.Drawing.Size(180, 22);
-            this.toolStripMenuItemImport.Text = "Импорт";
-            // 
-            // toolStripMenuItemExport
-            // 
-            this.toolStripMenuItemExport.Name = "toolStripMenuItemExport";
-            this.toolStripMenuItemExport.Size = new System.Drawing.Size(180, 22);
-            this.toolStripMenuItemExport.Text = "Экспорт";
-            // 
-            // toolStripMenuItemGuide
-            // 
-            this.toolStripMenuItemGuide.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItemHelp,
-            this.toolStripMenuItemAbout});
-            this.toolStripMenuItemGuide.Name = "toolStripMenuItemGuide";
-            this.toolStripMenuItemGuide.Size = new System.Drawing.Size(65, 20);
-            this.toolStripMenuItemGuide.Text = "Справка";
-            // 
-            // toolStripMenuItemHelp
-            // 
-            this.toolStripMenuItemHelp.Name = "toolStripMenuItemHelp";
-            this.toolStripMenuItemHelp.Size = new System.Drawing.Size(149, 22);
-            this.toolStripMenuItemHelp.Text = "Помощь";
-            // 
-            // toolStripMenuItemAbout
-            // 
-            this.toolStripMenuItemAbout.Name = "toolStripMenuItemAbout";
-            this.toolStripMenuItemAbout.Size = new System.Drawing.Size(149, 22);
-            this.toolStripMenuItemAbout.Text = "О программе";
             // 
             // statusStrip
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabelIterations,
-            this.toolStripStatusLabelVertices,
-            this.toolStripStatusLabelPlanes,
-            this.toolStripStatusLabelSpace,
-            this.toolStripStatusLabelTime});
-            this.statusStrip.Location = new System.Drawing.Point(5, 388);
+            this.statusStripLabelVertices,
+            this.statusStripLabelFaces,
+            this.statusStripSpacer,
+            this.statusStripProgressBar});
+            this.statusStrip.Location = new System.Drawing.Point(0, 439);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(490, 24);
-            this.statusStrip.TabIndex = 6;
-            this.statusStrip.Text = "statusStrip1";
+            this.statusStrip.Size = new System.Drawing.Size(624, 22);
+            this.statusStrip.TabIndex = 0;
+            this.statusStrip.Text = "Строка состояния";
             // 
-            // toolStripStatusLabelIterations
+            // statusStripLabelVertices
             // 
-            this.toolStripStatusLabelIterations.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
-            this.toolStripStatusLabelIterations.BorderStyle = System.Windows.Forms.Border3DStyle.Etched;
-            this.toolStripStatusLabelIterations.Name = "toolStripStatusLabelIterations";
-            this.toolStripStatusLabelIterations.Size = new System.Drawing.Size(76, 19);
-            this.toolStripStatusLabelIterations.Text = "Итерация: 0";
+            this.statusStripLabelVertices.Name = "statusStripLabelVertices";
+            this.statusStripLabelVertices.Size = new System.Drawing.Size(64, 17);
+            this.statusStripLabelVertices.Text = "Вершин: 0";
             // 
-            // toolStripStatusLabelVertices
+            // statusStripLabelFaces
             // 
-            this.toolStripStatusLabelVertices.Name = "toolStripStatusLabelVertices";
-            this.toolStripStatusLabelVertices.Size = new System.Drawing.Size(64, 19);
-            this.toolStripStatusLabelVertices.Text = "Вершин: 0";
+            this.statusStripLabelFaces.Name = "statusStripLabelFaces";
+            this.statusStripLabelFaces.Size = new System.Drawing.Size(58, 17);
+            this.statusStripLabelFaces.Text = "Граней: 0";
             // 
-            // toolStripStatusLabelPlanes
+            // statusStripSpacer
             // 
-            this.toolStripStatusLabelPlanes.Name = "toolStripStatusLabelPlanes";
-            this.toolStripStatusLabelPlanes.Size = new System.Drawing.Size(60, 19);
-            this.toolStripStatusLabelPlanes.Text = "Сторон: 0";
+            this.statusStripSpacer.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.statusStripSpacer.Name = "statusStripSpacer";
+            this.statusStripSpacer.Size = new System.Drawing.Size(285, 17);
+            this.statusStripSpacer.Spring = true;
+            this.statusStripSpacer.Text = "some space";
             // 
-            // toolStripStatusLabelSpace
+            // statusStripProgressBar
             // 
-            this.toolStripStatusLabelSpace.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right)));
-            this.toolStripStatusLabelSpace.BorderStyle = System.Windows.Forms.Border3DStyle.Etched;
-            this.toolStripStatusLabelSpace.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripStatusLabelSpace.Name = "toolStripStatusLabelSpace";
-            this.toolStripStatusLabelSpace.Size = new System.Drawing.Size(146, 19);
-            this.toolStripStatusLabelSpace.Spring = true;
+            this.statusStripProgressBar.Name = "statusStripProgressBar";
+            this.statusStripProgressBar.Size = new System.Drawing.Size(200, 16);
+            this.statusStripProgressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             // 
-            // toolStripStatusLabelTime
+            // menuStrip1
             // 
-            this.toolStripStatusLabelTime.Name = "toolStripStatusLabelTime";
-            this.toolStripStatusLabelTime.Size = new System.Drawing.Size(129, 19);
-            this.toolStripStatusLabelTime.Text = "Время: 00:00:00.000000";
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuStripItemFile});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(624, 24);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip";
             // 
-            // splitContainer
+            // menuStripItemFile
             // 
-            this.splitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.splitContainer.Location = new System.Drawing.Point(0, 24);
-            this.splitContainer.Name = "splitContainer";
-            // 
-            // splitContainer.Panel1
-            // 
-            this.splitContainer.Panel1.Controls.Add(this.buttonGenerate);
-            this.splitContainer.Panel1.Controls.Add(this.labelIterations);
-            this.splitContainer.Panel1.Controls.Add(this.numericUpDownIterations);
-            this.splitContainer.Panel1.Padding = new System.Windows.Forms.Padding(5);
-            this.splitContainer.Panel1MinSize = 150;
-            // 
-            // splitContainer.Panel2
-            // 
-            this.splitContainer.Panel2.Controls.Add(this.tabControl);
-            this.splitContainer.Panel2.Controls.Add(this.statusStrip);
-            this.splitContainer.Panel2.Padding = new System.Windows.Forms.Padding(5);
-            this.splitContainer.Panel2MinSize = 300;
-            this.splitContainer.Size = new System.Drawing.Size(704, 417);
-            this.splitContainer.SplitterDistance = 200;
-            this.splitContainer.TabIndex = 8;
-            // 
-            // buttonGenerate
-            // 
-            this.buttonGenerate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonGenerate.Location = new System.Drawing.Point(8, 361);
-            this.buttonGenerate.Name = "buttonGenerate";
-            this.buttonGenerate.Size = new System.Drawing.Size(184, 47);
-            this.buttonGenerate.TabIndex = 2;
-            this.buttonGenerate.Text = "Генерировать";
-            this.buttonGenerate.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.buttonGenerate.UseVisualStyleBackColor = false;
-            // 
-            // labelIterations
-            // 
-            this.labelIterations.AutoSize = true;
-            this.labelIterations.Location = new System.Drawing.Point(8, 10);
-            this.labelIterations.Name = "labelIterations";
-            this.labelIterations.Size = new System.Drawing.Size(56, 13);
-            this.labelIterations.TabIndex = 1;
-            this.labelIterations.Text = "Итерации";
+            this.menuStripItemFile.Name = "menuStripItemFile";
+            this.menuStripItemFile.Size = new System.Drawing.Size(48, 20);
+            this.menuStripItemFile.Text = "Файл";
             // 
             // numericUpDownIterations
             // 
-            this.numericUpDownIterations.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.numericUpDownIterations.Location = new System.Drawing.Point(72, 8);
+            this.numericUpDownIterations.Location = new System.Drawing.Point(71, 27);
             this.numericUpDownIterations.Maximum = new decimal(new int[] {
             12,
             0,
             0,
             0});
             this.numericUpDownIterations.Name = "numericUpDownIterations";
-            this.numericUpDownIterations.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDownIterations.TabIndex = 0;
+            this.numericUpDownIterations.Size = new System.Drawing.Size(64, 20);
+            this.numericUpDownIterations.TabIndex = 2;
+            // 
+            // buttonGenerate
+            // 
+            this.buttonGenerate.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.buttonGenerate.Location = new System.Drawing.Point(279, 38);
+            this.buttonGenerate.Name = "buttonGenerate";
+            this.buttonGenerate.Size = new System.Drawing.Size(166, 46);
+            this.buttonGenerate.TabIndex = 3;
+            this.buttonGenerate.Text = "Генерировать";
+            this.buttonGenerate.UseVisualStyleBackColor = true;
+            this.buttonGenerate.Click += new System.EventHandler(this.Generate);
             // 
             // tabControl
             // 
+            this.tabControl.Appearance = System.Windows.Forms.TabAppearance.Buttons;
             this.tabControl.Controls.Add(this.tabPageVertices);
-            this.tabControl.Controls.Add(this.tabPagePlanes);
-            this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl.HotTrack = true;
-            this.tabControl.Location = new System.Drawing.Point(5, 5);
+            this.tabControl.Controls.Add(this.tabPageFaces);
+            this.tabControl.ItemSize = new System.Drawing.Size(96, 32);
+            this.tabControl.Location = new System.Drawing.Point(12, 87);
+            this.tabControl.Margin = new System.Windows.Forms.Padding(0);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(490, 383);
-            this.tabControl.TabIndex = 0;
+            this.tabControl.Size = new System.Drawing.Size(433, 335);
+            this.tabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tabControl.TabIndex = 5;
             // 
             // tabPageVertices
             // 
             this.tabPageVertices.Controls.Add(this.dataGridViewVertices);
-            this.tabPageVertices.Location = new System.Drawing.Point(4, 22);
+            this.tabPageVertices.Location = new System.Drawing.Point(4, 36);
+            this.tabPageVertices.Margin = new System.Windows.Forms.Padding(0);
             this.tabPageVertices.Name = "tabPageVertices";
-            this.tabPageVertices.Size = new System.Drawing.Size(482, 357);
+            this.tabPageVertices.Size = new System.Drawing.Size(425, 295);
             this.tabPageVertices.TabIndex = 0;
             this.tabPageVertices.Text = "Вершины";
             this.tabPageVertices.UseVisualStyleBackColor = true;
@@ -247,98 +167,206 @@
             // 
             this.dataGridViewVertices.AllowUserToAddRows = false;
             this.dataGridViewVertices.AllowUserToDeleteRows = false;
+            this.dataGridViewVertices.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewVertices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewVertices.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.vertexNumber,
+            this.vertexX,
+            this.vertexY,
+            this.vertexZ});
             this.dataGridViewVertices.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewVertices.EnableHeadersVisualStyles = false;
             this.dataGridViewVertices.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewVertices.Name = "dataGridViewVertices";
             this.dataGridViewVertices.ReadOnly = true;
-            this.dataGridViewVertices.Size = new System.Drawing.Size(482, 357);
+            this.dataGridViewVertices.RowHeadersVisible = false;
+            this.dataGridViewVertices.Size = new System.Drawing.Size(425, 295);
             this.dataGridViewVertices.TabIndex = 0;
             // 
-            // tabPagePlanes
+            // vertexNumber
             // 
-            this.tabPagePlanes.Controls.Add(this.dataGridViewPlanes);
-            this.tabPagePlanes.Location = new System.Drawing.Point(4, 22);
-            this.tabPagePlanes.Name = "tabPagePlanes";
-            this.tabPagePlanes.Size = new System.Drawing.Size(482, 357);
-            this.tabPagePlanes.TabIndex = 1;
-            this.tabPagePlanes.Text = "Стороны";
-            this.tabPagePlanes.UseVisualStyleBackColor = true;
+            this.vertexNumber.HeaderText = "Номер вершины";
+            this.vertexNumber.Name = "vertexNumber";
+            this.vertexNumber.ReadOnly = true;
             // 
-            // dataGridViewPlanes
+            // vertexX
             // 
-            this.dataGridViewPlanes.AllowUserToAddRows = false;
-            this.dataGridViewPlanes.AllowUserToDeleteRows = false;
-            this.dataGridViewPlanes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPlanes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewPlanes.Location = new System.Drawing.Point(0, 0);
-            this.dataGridViewPlanes.Name = "dataGridViewPlanes";
-            this.dataGridViewPlanes.ReadOnly = true;
-            this.dataGridViewPlanes.Size = new System.Drawing.Size(482, 357);
-            this.dataGridViewPlanes.TabIndex = 0;
+            this.vertexX.HeaderText = "X";
+            this.vertexX.Name = "vertexX";
+            this.vertexX.ReadOnly = true;
             // 
-            // MainProgramInterface
+            // vertexY
             // 
-            this.AcceptButton = this.buttonGenerate;
+            this.vertexY.HeaderText = "Y";
+            this.vertexY.Name = "vertexY";
+            this.vertexY.ReadOnly = true;
+            // 
+            // vertexZ
+            // 
+            this.vertexZ.HeaderText = "Z";
+            this.vertexZ.Name = "vertexZ";
+            this.vertexZ.ReadOnly = true;
+            // 
+            // tabPageFaces
+            // 
+            this.tabPageFaces.Controls.Add(this.dataGridViewFaces);
+            this.tabPageFaces.Location = new System.Drawing.Point(4, 36);
+            this.tabPageFaces.Margin = new System.Windows.Forms.Padding(0);
+            this.tabPageFaces.Name = "tabPageFaces";
+            this.tabPageFaces.Size = new System.Drawing.Size(425, 295);
+            this.tabPageFaces.TabIndex = 1;
+            this.tabPageFaces.Text = "Стороны";
+            this.tabPageFaces.UseVisualStyleBackColor = true;
+            // 
+            // dataGridViewFaces
+            // 
+            this.dataGridViewFaces.AllowUserToAddRows = false;
+            this.dataGridViewFaces.AllowUserToDeleteRows = false;
+            this.dataGridViewFaces.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewFaces.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.faceNumber,
+            this.verticesUsed});
+            this.dataGridViewFaces.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewFaces.EnableHeadersVisualStyles = false;
+            this.dataGridViewFaces.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewFaces.Name = "dataGridViewFaces";
+            this.dataGridViewFaces.ReadOnly = true;
+            this.dataGridViewFaces.RowHeadersVisible = false;
+            this.dataGridViewFaces.Size = new System.Drawing.Size(425, 295);
+            this.dataGridViewFaces.TabIndex = 0;
+            // 
+            // faceNumber
+            // 
+            this.faceNumber.HeaderText = "Номер стороны";
+            this.faceNumber.Name = "faceNumber";
+            this.faceNumber.ReadOnly = true;
+            // 
+            // verticesUsed
+            // 
+            this.verticesUsed.HeaderText = "Вершины";
+            this.verticesUsed.Name = "verticesUsed";
+            this.verticesUsed.ReadOnly = true;
+            // 
+            // label
+            // 
+            this.label.AutoSize = true;
+            this.label.Location = new System.Drawing.Point(9, 29);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(56, 13);
+            this.label.TabIndex = 6;
+            this.label.Text = "Итерации";
+            this.label.Click += new System.EventHandler(this.Label_Click);
+            // 
+            // labelScroll
+            // 
+            this.labelScroll.AutoSize = true;
+            this.labelScroll.Location = new System.Drawing.Point(7, 55);
+            this.labelScroll.Name = "labelScroll";
+            this.labelScroll.Size = new System.Drawing.Size(58, 13);
+            this.labelScroll.TabIndex = 8;
+            this.labelScroll.Text = "Просмотр";
+            // 
+            // numericUpDownScroll
+            // 
+            this.numericUpDownScroll.Location = new System.Drawing.Point(71, 53);
+            this.numericUpDownScroll.Maximum = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.numericUpDownScroll.Name = "numericUpDownScroll";
+            this.numericUpDownScroll.Size = new System.Drawing.Size(64, 20);
+            this.numericUpDownScroll.TabIndex = 7;
+            this.numericUpDownScroll.ValueChanged += new System.EventHandler(this.NumericUpDownScroll_ValueChanged);
+            // 
+            // labelNumber
+            // 
+            this.labelNumber.AutoSize = true;
+            this.labelNumber.Location = new System.Drawing.Point(141, 55);
+            this.labelNumber.Name = "labelNumber";
+            this.labelNumber.Size = new System.Drawing.Size(66, 13);
+            this.labelNumber.TabIndex = 10;
+            this.labelNumber.Text = "Количество";
+            // 
+            // numericUpDownNumber
+            // 
+            this.numericUpDownNumber.Location = new System.Drawing.Point(209, 53);
+            this.numericUpDownNumber.Name = "numericUpDownNumber";
+            this.numericUpDownNumber.Size = new System.Drawing.Size(64, 20);
+            this.numericUpDownNumber.TabIndex = 9;
+            this.numericUpDownNumber.Value = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
+            this.numericUpDownNumber.ValueChanged += new System.EventHandler(this.NumericUpDownNumber_ValueChanged);
+            // 
+            // MainApplicationInterface
+            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(704, 441);
-            this.Controls.Add(this.splitContainer);
-            this.Controls.Add(this.menuStrip);
+            this.ClientSize = new System.Drawing.Size(624, 461);
+            this.Controls.Add(this.labelNumber);
+            this.Controls.Add(this.numericUpDownNumber);
+            this.Controls.Add(this.labelScroll);
+            this.Controls.Add(this.numericUpDownScroll);
+            this.Controls.Add(this.label);
+            this.Controls.Add(this.tabControl);
+            this.Controls.Add(this.buttonGenerate);
+            this.Controls.Add(this.numericUpDownIterations);
+            this.Controls.Add(this.statusStrip);
+            this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
-            this.MainMenuStrip = this.menuStrip;
             this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(720, 480);
-            this.Name = "MainProgramInterface";
+            this.MinimumSize = new System.Drawing.Size(640, 500);
+            this.Name = "MainApplicationInterface";
             this.ShowIcon = false;
             this.Text = "Пирамида Серпинского 3D";
-            this.menuStrip.ResumeLayout(false);
-            this.menuStrip.PerformLayout();
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
-            this.splitContainer.Panel1.ResumeLayout(false);
-            this.splitContainer.Panel1.PerformLayout();
-            this.splitContainer.Panel2.ResumeLayout(false);
-            this.splitContainer.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).EndInit();
-            this.splitContainer.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownIterations)).EndInit();
             this.tabControl.ResumeLayout(false);
             this.tabPageVertices.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVertices)).EndInit();
-            this.tabPagePlanes.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPlanes)).EndInit();
+            this.tabPageFaces.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFaces)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownScroll)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumber)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.MenuStrip menuStrip;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemFile;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemGuide;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemExport;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemImport;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemHelp;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemAbout;
 
-        private System.Windows.Forms.SplitContainer splitContainer;
-        private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.StatusStrip statusStrip;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelIterations;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelVertices;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelPlanes;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelTime;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelSpace;
-        private System.Windows.Forms.TabPage tabPageVertices;
-        private System.Windows.Forms.DataGridView dataGridViewVertices;
-        private System.Windows.Forms.TabPage tabPagePlanes;
-        private System.Windows.Forms.DataGridView dataGridViewPlanes;
-
-        private System.Windows.Forms.Label labelIterations;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem menuStripItemFile;
+        private System.Windows.Forms.ToolStripStatusLabel statusStripLabelVertices;
+        private System.Windows.Forms.ToolStripStatusLabel statusStripLabelFaces;
+        private System.Windows.Forms.ToolStripProgressBar statusStripProgressBar;
+        private System.Windows.Forms.ToolStripStatusLabel statusStripSpacer;
         private System.Windows.Forms.NumericUpDown numericUpDownIterations;
         private System.Windows.Forms.Button buttonGenerate;
+        private System.Windows.Forms.TabControl tabControl;
+        private System.Windows.Forms.TabPage tabPageVertices;
+        private System.Windows.Forms.TabPage tabPageFaces;
+        private System.Windows.Forms.Label label;
+        private System.Windows.Forms.DataGridView dataGridViewFaces;
+        private System.Windows.Forms.DataGridView dataGridViewVertices;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vertexNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vertexX;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vertexY;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vertexZ;
+        private System.Windows.Forms.DataGridViewTextBoxColumn faceNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn verticesUsed;
+        private System.Windows.Forms.Label labelScroll;
+        private System.Windows.Forms.NumericUpDown numericUpDownScroll;
+        private System.Windows.Forms.Label labelNumber;
+        private System.Windows.Forms.NumericUpDown numericUpDownNumber;
     }
 }
 
